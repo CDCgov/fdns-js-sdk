@@ -1,0 +1,33 @@
+{
+  "name": "fdns-js-sdk",
+  "version": "1.0.0",
+  "description": "This is the JavaScript SDK for Foundation Services",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run test:mocha && npm run test:lint",
+    "test:mocha": "NODE_ENV=test ./node_modules/mocha/bin/mocha --reporter spec 'test/**/*.js'",
+    "test:lint": "./node_modules/eslint/bin/eslint.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CDCgov/fdns-js-sdk.git"
+  },
+  "author": "Centers for Disease Control and Prevention (http://github.com/CDCgov)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/CDCgov/fdns-js-sdk/issues"
+  },
+  "homepage": "https://github.com/CDCgov/fdns-js-sdk#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.15.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^5.2.0",
+    "proxyquire": "^2.0.1"
+  }
+}

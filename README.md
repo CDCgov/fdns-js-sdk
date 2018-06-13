@@ -1,12 +1,76 @@
 # fdns-js-sdk
-This is the repository with the JavaScript SDK for Foundation Services, will also need to publish to NPM.
+This is the repository with the JavaScript SDK for Foundation Services.
 
-## ----- Start of respository specific READ ME -----
-### This repository specific READ ME instructions go here
+## Running locally
+Please read the following instructions carefully for information on how to run and test this SDK in your local environment.
 
-Replace everything within this section demarcated with “-----“ with material appropriate to your repo that is useful to your developers and users like installation steps, user guide etc.
-## ----- End of respository specific READ ME -----
-  
+### Before you start
+You will need to have the following dependencies installed before getting up and running locally:
+
+- [FDNS Gateway Microservice](https://github.com/CDCgov/fdns-ms-gateway), which must be running using that project's `make docker-start` command
+- [Node.js](https://nodejs.org/en/)
+- **Windows Users**: Please use [Cygwin](http://www.cygwin.com/) for running commands in this README
+
+## How to use
+This SDK is designed to be used in React projects primarily created with [create-react-app](https://github.com/facebook/create-react-app) and [Node.js](https://nodejs.org) projects.
+
+### React
+To use this in a React project built with [create-react-app](https://github.com/facebook/create-react-app) use the following instructions:
+
+```sh
+create-react-app fdns-js-sdk-demo
+cd fdns-js-sdk-demo
+npm install --save CDCgov/fdns-js-sdk
+$EDITOR src/App.js
+```
+
+Then in your `App.js` file include the following:
+
+```javascript
+import FDNS from 'fdns-js-sdk';
+
+const fdns = new FDNS({
+  HL7_UTILS_URL: 'http://localhost:8099/hl7',
+  CDA_UTILS_URL: 'http://localhost:8099/cda',
+  STORAGE_URL: 'http://localhost:8099/storage',
+  OBJECT_URL: 'http://localhost:8099/object',
+  INDEXING_URL: 'http://localhost:8099/indexing',
+  COMBINER_URL: 'http://localhost:8099/combiner',
+  RULES_URL: 'http://localhost:8099/rules',
+});
+```
+
+**Note: The URLs of the endpoints here that are used are based on [FDNS Gateway Microservice](https://github.com/CDCgov/fdns-ms-gateway). These microservices will need to be running in order to point to these endpoints.**
+
+### Node
+To use this in a Node project, use the following instructions:
+
+```
+mkdir fdns-js-sdk-demo
+cd fdns-js-sdk-demo
+npm init
+npm install --save CDCgov/fdns-js-sdk
+$EDITOR src/server.js
+```
+
+Then in your `server.js` file include the following:
+
+```javascript
+const FDNS = require('fdns-js-sdk');
+
+const fdns = new FDNS({
+  HL7_UTILS_URL: 'http://localhost:8099/hl7',
+  CDA_UTILS_URL: 'http://localhost:8099/cda',
+  STORAGE_URL: 'http://localhost:8099/storage',
+  OBJECT_URL: 'http://localhost:8099/object',
+  INDEXING_URL: 'http://localhost:8099/indexing',
+  COMBINER_URL: 'http://localhost:8099/combiner',
+  RULES_URL: 'http://localhost:8099/rules',
+});
+```
+
+**Note: The URLs of the endpoints here that are used are based on [FDNS Gateway Microservice](https://github.com/CDCgov/fdns-ms-gateway). These microservices will need to be running in order to point to these endpoints.**
+
 ## Public Domain
 This repository constitutes a work of the United States Government and is not
 subject to domestic copyright protection under 17 USC § 105. This repository is in
