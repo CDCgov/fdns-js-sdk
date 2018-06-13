@@ -1,4 +1,4 @@
-# fdns-js-sdk
+# FDNS JavaScript SDK
 This is the repository with the JavaScript SDK for Foundation Services.
 
 ## Running locally
