@@ -1,4 +1,4 @@
-image: docker:stable
+image: node:8.12
 
 services:
   - docker:dind
