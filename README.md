@@ -1,5 +1,6 @@
-# FDNS JavaScript SDK
 [![Build Status](https://travis-ci.org/CDCgov/fdns-js-sdk.svg?branch=master)](https://travis-ci.org/CDCgov/fdns-js-sdk)
+
+# FDNS JavaScript SDK
 This is the repository with the JavaScript SDK for Foundation Services.
 
 ## Running locally
