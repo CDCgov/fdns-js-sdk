@@ -1,9 +1,10 @@
 {
   "name": "fdns-js-sdk",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "This is the JavaScript SDK for Foundation Services",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prepare": "babel lib -d dist",
     "test": "npm run test:mocha && npm run test:lint",
     "test:mocha": "NODE_ENV=test ./node_modules/mocha/bin/mocha --reporter spec 'test/**/*.js'",
     "test:lint": "./node_modules/eslint/bin/eslint.js ."
@@ -22,6 +23,9 @@
     "axios": "^0.18.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "axios-mock-adapter": "^1.15.0",
     "chai": "^3.5.0",
     "eslint": "^3.16.1",
