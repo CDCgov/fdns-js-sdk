@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/CDCgov/fdns-js-sdk#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0"
   },
   "devDependencies": {
