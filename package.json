@@ -4,7 +4,7 @@
   "description": "This is the JavaScript SDK for Foundation Services",
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "babel src -d dist",
+    "prepare": "babel lib -d dist",
     "test": "npm run test:mocha && npm run test:lint",
     "test:mocha": "NODE_ENV=test ./node_modules/mocha/bin/mocha --reporter spec 'test/**/*.js'",
     "test:lint": "./node_modules/eslint/bin/eslint.js ."
